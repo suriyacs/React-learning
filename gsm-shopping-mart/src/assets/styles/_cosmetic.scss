@@ -1,0 +1,27 @@
+@mixin make-row() {
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+@mixin common-column() {
+  position: relative;
+  min-height: 40px;
+  float: left;
+  @include padding(15px);
+}
+
+@mixin make-column($size, $columns: $grid-columns) {
+  width: percentage($size / $columns);
+  @include common-column();
+}
+
+@mixin padding($value) {
+  padding: $value;
+}

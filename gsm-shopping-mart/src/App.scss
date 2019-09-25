@@ -1,0 +1,16 @@
+@import './assets/styles/variable';
+@import './assets/styles/cosmetic';
+@import './assets/styles/grid';
+
+.App {
+  text-align: center;
+  background-image: $overview-Background;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+}
+
